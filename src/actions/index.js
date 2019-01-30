@@ -17,6 +17,6 @@ export const getStarWars = () => dispatch => {
     .get(
       `https://swapi.co/api/people/`
     )
-    .then(result => dispatch({ type: SUCCESS, payload: result.data }))
+    .then(result => dispatch({ type: SUCCESS, payload: result.data.results }))
     .catch(error => dispatch({ type: FAILURE, payload: error }))
 }
